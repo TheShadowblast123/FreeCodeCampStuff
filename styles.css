@@ -1,0 +1,168 @@
+body {
+  background-color: rgb(15, 15, 15);
+  color: BlanchedAlmond;
+}
+code {
+    background-color:#1e1e1e;
+    color: #7ccae1;
+}
+.first_line{
+  color: red;
+}
+.second_line{
+  color: blue;
+}
+.third_line{
+  color:yellow;
+}
+.fourth_line{
+  color: green;
+} 
+h4 {
+  text-align: center;
+}
+h5 {
+  text-align: center;
+}
+main {
+    margin-left: 31%;
+    
+}
+p {
+    border-left: 3px solid black;
+    padding-left: 1%;
+    background-color: #1e1e1e;
+    border-radius: 0px 15px 15px 0px;
+    padding-right: 1%;
+}
+p, code, li{
+    font-size: 3vw;
+  
+    margin-left: 2%;
+}
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 30%;
+  height: 100%;
+  border-right:  solid;
+  border-color: black;
+}
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: BurlyWood;
+  text-decoration: none;
+  cursor: pointer;
+}
+#navbar a:hover {
+    color: white;
+}
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+h1 {
+    font-size: 6vw;
+    padding-left: 3%;
+    text-decoration-line: underline;
+}
+h2 {
+    font-size: 4.5vw;
+    border-bottom: 1px solid #4d4d46;
+    
+    box-shadow: 0 10px 12px -10px #4d4d46;
+    width: 50%;
+    
+
+}
+h3 {
+    font-size: 3.9vw;
+    border-bottom: 1px solid #4d4d46;
+    box-shadow: 0 10px 12px -10px #4d4d46;
+    width: 25%;
+    
+}
+article {
+    margin-left: 2%;
+}
+h4 {
+    font-size: 3.6vw;
+}
+h5{
+    font-size: 3.3vw;
+}
+@media screen and (max-width:599px) {
+p, code, li {
+    font-size: 2.5vw;
+}
+h1 {
+    font-size: 3.25vw;
+}
+h2 {
+    font-size: 3.5vw;
+}
+h3 {
+    font-size: 3.25vw;
+}
+h4 {
+    font-size: 3vw;
+}
+h5{
+    font-size: 2.75vw;
+}
+
+}
+@media screen and (min-width:600px) and (max-width:999px) {
+p, code, li {
+    font-size: 2vw;
+}
+h1 {
+    font-size: 3vw;
+}
+h2 {
+    font-size: 2.8vw;
+}
+h3 {
+    font-size: 2.6vw;
+}
+h4 {
+    font-size: 2.4vw;
+}
+h5{
+    font-size: 2.2vw;
+}
+
+}
+@media screen and (min-width:1000px){
+p, code {
+    font-size: 1.5vw;
+}
+h1 {
+    font-size: 2.25vw;
+}
+h2 {
+    font-size: 2.1vw;
+}
+h3 {
+    font-size: 1.95vw;
+}
+h4 {
+    font-size: 1.8vw;
+}
+h5{
+    font-size: 1.65vw;
+}
+
+}
