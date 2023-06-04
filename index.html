@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Web Pantoum Generator | Shadow's Den</title>
+        <title>Web Pantoum Drafter | Shadow's Den</title>
 
         <link rel="stylesheet" href="pantoumStyle.css">
     </head>
@@ -10,36 +10,50 @@
             <nav>
 
             </nav>
-            <h1>Web Pantoum Generator</h1>
+            <h1>Web Pantoum Drafter</h1>
 
         </header>
+
         <div class = "stanza-background-container">
+            <div class = "stanza">
+                <p> Poem Title:</p>
+                <input type = "text" class = "line" placeholder = "Title here"></input> 
+                <p>Poet:</p>
+                <input type = "text" class = "line"value = "By:"></input> 
+            </div>
             <div class = "stanza" id = "first_stanza">
-                <input type = "text" class = "line_1"></input><br>
-                <input type = "text" class = "line_2"></input><br>
-                <input type = "text" class = "line_3"></input><br>
-                <input type = "text" class = "line_4"></input><br>
+                <input type = "text" class = "line_1 line"></input><br>
+                <input type = "text" class = "line_2 line"></input><br>
+                <input type = "text" class = "line_3 line"></input><br>
+                <input type = "text" class = "line_4 line"></input><br>
             </div>
             <div class = "stanza" id = "middle_stanza">
-                <input type = "text" class = "line_2"></input><br>
-                <input type = "text" class = "line_5"></input><br>
-                <input type = "text" class = "line_4"></input><br>
-                <input type = "text" class = "line_6"></input><br>
+                <input type = "text" class = "line_2 line"></input><br>
+                <input type = "text" class = "line_5 line"></input><br>
+                <input type = "text" class = "line_4 line"></input><br>
+                <input type = "text" class = "line_6 line"></input><br>
             </div>
             <div class = "stanza" id = "middle_stanza">
-                <input type = "text" class = "line_5"></input><br>
-                <input type = "text" class = "line_7"></input><br>
-                <input type = "text" class = "line_6"></input><br>
-                <input type = "text" class = "line_8"></input><br>
+                <input type = "text" class = "line_5 line"></input><br>
+                <input type = "text" class = "line_7 line"></input><br>
+                <input type = "text" class = "line_6 line"></input><br>
+                <input type = "text" class = "line_8 line"></input><br>
             </div>
             
             <div class = "stanza" id = "last_stanza">
-                <input type = "text" class = "line_7"></input><br>
-                <input type = "text" class = "line_3"></input><br>
-                <input type = "text" class = "line_8"></input><br>
-                <input type = "text" class = "line_1"></input><br>
+                <input type = "text" class = "line_7 line"></input><br>
+                <input type = "text" class = "line_3 line"></input><br>
+                <input type = "text" class = "line_8 line"></input><br>
+                <input type = "text" class = "line_1 line"></input><br>
 
             </div>
+            <div class = "button-holder">
+                <button onclick="DownloadPantoum()"> Download Poem! </button>
+                <button onclick="CopyPantoum()"> Copy Poem! </button>
+                <br><br>
+                <textarea placeholder = "Copy from here" readonly id = "copyPantoum"> </textarea>
+            </div> 
+            
         </div>
         <script src = "script.js">
         </script>

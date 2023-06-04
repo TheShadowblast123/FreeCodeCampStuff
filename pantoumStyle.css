@@ -6,14 +6,17 @@ div .stanza {
     background-color: rgba(255, 0, 0, 0.125);
     margin: 4%;
     text-align: center;
-    padding: 10px;
+    padding: 1%;
     border-radius: 20px;
 }
 input {
-    width: 60%;
+    width: 80%;
     margin: 5px;
     background-color: black;
     color:bisque;
+    height: 2.75vh;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(27, 0, 0, 1);
 }
 h1 {
     text-align:center;
@@ -21,8 +24,8 @@ h1 {
 .stanza-background-container {
     width: 90%;
     background-color: darkred;
-    margin: 10px;
-    padding: 10px;
+    margin: 1%;
+    padding: 1%;
     border-radius: 10%;
         --s: 200px; /* control the size */
     --c1: hsl(0, 100%, 5%, 0.5);
@@ -38,8 +41,33 @@ h1 {
     box-shadow: 0 0 px 10px var(--c3)
 }
 input:focus{
-    width: 70%;
+    width: 90%;
     color:white;
     border-color: white;
+    
 }
-  
+.button-holder {
+    text-align: center;
+    margin : 10px;
+    padding : 10px;
+
+}
+button {
+    border-radius: 5px;
+    background-color: bisque;
+    border-color: hsl(0, 100%, 16%);
+    width: 30%;
+    height: 60%;
+}
+button:hover {
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(112, 0, 0, 0.3);
+}
+textarea {
+    background-color: black;
+    color:bisque;
+    width: 100%;
+    border-radius: 5px;
+    
+    
+}

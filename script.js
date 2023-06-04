@@ -9,6 +9,7 @@ const inputPairs = [
   { class: 'line_8' },
 
 ];
+const orderedInputs = document.el
 
 inputPairs.forEach(pair => {
   const { class: className } = pair;
@@ -25,3 +26,38 @@ inputPairs.forEach(pair => {
     });
   });
 });
+const lines = document.querySelectorAll('.line');
+const linesArray = Array.from(lines);
+function DownloadPantoum() {
+ 
+  let count = 0;
+  let output = '';
+  lines.forEach(line => {
+    if (count < 1) output += count + " " + line.value + '\n';
+    else  output += (count - 1) + " " + line.value + '\n';
+      count++;
+    
+  });
+  const link = document.createElement("a");
+  const file = new Blob([output], {type: 'text/plain'});
+  link.href = URL.createObjectURL(file);
+  link.download = "Pantoum Draft.txt"
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
+function CopyPantoum() {
+ 
+  let count = 0;
+  let output = '';
+  lines.forEach(line => {
+    if (count < 2) output += "\t" + line.value + '\n';
+    else  output += (count - 1) + "\t" + line.value + '\n';
+      count++;
+    
+  });
+  const copyArea = document.getElementById("copyPantoum");
+  copyArea.value = output;
+  copyArea.style.height = 'auto';
+  copyArea.style.height = copyArea.scrollHeight + 'px';
+
+}
