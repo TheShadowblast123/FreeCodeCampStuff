@@ -3,14 +3,17 @@ body{
     color: blanchedalmond;
 }
 div .stanza {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.125);
     margin: 4%;
     text-align: center;
     padding: 10px;
+    border-radius: 20px;
 }
 input {
     width: 60%;
-    ;
+    margin: 5px;
+    background-color: black;
+    color:bisque;
 }
 h1 {
     text-align:center;
@@ -22,9 +25,9 @@ h1 {
     padding: 10px;
     border-radius: 10%;
         --s: 200px; /* control the size */
-    --c1: #1b0000;
-    --c2: #370a00;
-    --c3: #240000;
+    --c1: hsl(0, 100%, 5%, 0.5);
+    --c2: hsl(11, 100%, 11%, 0.5);
+    --c3: hsla(0, 100%, 7%, 0.5);
     
     background:
       repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
@@ -32,7 +35,11 @@ h1 {
       repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
     background-size: var(--s) calc(var(--s)*0.577);
     /* 0.577 = tan(30deg)*/
-    box-shadow: 0 0 20px 10px var(--c3)
+    box-shadow: 0 0 px 10px var(--c3)
 }
-
+input:focus{
+    width: 70%;
+    color:white;
+    border-color: white;
+}
   
