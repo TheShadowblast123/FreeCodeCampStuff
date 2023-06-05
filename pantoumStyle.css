@@ -58,7 +58,7 @@ button {
     background-color: bisque;
     border-color: hsl(0, 100%, 16%);
     width: 30%;
-    height: 60%;
+    height: 6vh;
 }
 button:hover {
     background-color: white;
