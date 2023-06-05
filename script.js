@@ -59,5 +59,6 @@ function CopyPantoum() {
   copyArea.value = output;
   copyArea.style.height = 'auto';
   copyArea.style.height = copyArea.scrollHeight + 'px';
+  copyArea.removeAttribute("readonly");
 
 }
