@@ -62,3 +62,8 @@ function CopyPantoum() {
   copyArea.removeAttribute("readonly");
 
 }
+/*Needed functionality
+  edit toggle
+  add/remove stanzas maybe
+  line number toggle
+  */
