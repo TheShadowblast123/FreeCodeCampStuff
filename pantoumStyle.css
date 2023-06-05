@@ -1,6 +1,7 @@
 body{
     background-color: black;
     color: blanchedalmond;
+    font-size: 120%;
 }
 div .stanza {
     background-color: rgba(255, 0, 0, 0.125);
