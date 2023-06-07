@@ -9,8 +9,15 @@ const inputPairs = [
   { class: 'line_8' },
 
 ];
-const orderedInputs = document.el
-
+let thirdLineFirstStanza = '';
+let firstLineFirstStanza = '';
+let stanzaCount = 4;// [2,4][3,6][4,8][5,10][6,12][7,14][8,16] lines = 2 * stanzaCount
+const orderedInputs = document.el;
+const editToggle = document.getElementById('editToggle');
+const lineToggle = document.getElementById('lineToggle');
+const firstLineEnd = document.getElementById('firstLineEnd');
+const decrementer = document.getElementById('decrement');
+const incrementer = document.getElementById('increment');
 inputPairs.forEach(pair => {
   const { class: className } = pair;
   const inputs = document.querySelectorAll(`.${className}`);
@@ -28,6 +35,7 @@ inputPairs.forEach(pair => {
 });
 const lines = document.querySelectorAll('.line');
 const linesArray = Array.from(lines);
+const stanzaCountElement = document.getElementById('stanzas')
 function DownloadPantoum() {
  
   let count = 0;
@@ -50,8 +58,17 @@ function CopyPantoum() {
   let count = 0;
   let output = '';
   lines.forEach(line => {
-    if (count < 2) output += "\t" + line.value + '\n';
-    else  output += (count - 1) + "\t" + line.value + '\n';
+    
+    if (count < 2){
+       output += "\t" + line.value + '\n';
+    }
+    else  {
+      if((count + 2) % 4 == 0) output += '\n';
+      if(lineToggle.checked){
+
+        output += (count - 1) + "\t" + line.value + '\n';
+      } else output += "\t" + line.value + '\n';
+    }
       count++;
     
   });
@@ -59,11 +76,40 @@ function CopyPantoum() {
   copyArea.value = output;
   copyArea.style.height = 'auto';
   copyArea.style.height = copyArea.scrollHeight + 'px';
-  copyArea.removeAttribute("readonly");
+  if(editToggle.checked)   copyArea.readOnly = false;
+  else copyArea.readOnly = true;
+
+}
+function incrementStanza() {
+  console.log("incrementing")
+  if(stanzaCount < 8){
+    stanzaCount++;
+    stanzaCountElement.value = stanzaCount;
+    decrementer.disabled = false;
+    funky();
+  }
+  if(stanzaCount == 8) incrementer.disabled = true;
+  
+}
+function decrementStanza() {
+  if(stanzaCount > 2){
+    stanzaCount--;
+    stanzaCountElement.value = stanzaCount;
+    incrementer.disabled = false;
+    funky()
+  } 
+  if(stanzaCount == 2) decrementer.disabled = true;
+  
+  
+}
+
+function funky() {
+  
+  console.log(stanzaCount);
 
 }
 /*Needed functionality
-  edit toggle
+
   add/remove stanzas maybe
-  line number toggle
+  ending with first or third line
   */

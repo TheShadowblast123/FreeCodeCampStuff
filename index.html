@@ -15,41 +15,95 @@
         </header>
 
         <div class = "stanza-background-container">
+            <div class = "explainer">
+                <div>
+                    <h3>What is a pantoum?</h3>
+                    <p><em>A pantoum is a poetic form with repetitive quatrains orginating in Malaysia and is known for its rhythmic and reflective qualities. The even lines of each stanza become the odd lines of the next, until the very end where the first odd lines repeat.</em> </p>
+                </div>
+                <div>
+                    <h3>That sounds cool! But isn't it hard?</h3>
+                    <p><em>The repeating nature of the poem is difficult to tame, but very beautiful when executed well, and that's the point of this drafter! Simply start drafting your poem and the lines will show up where they're supposed to go, so you only have to think of the poem as a whole!</em> </p>
+                </div>
+            </div>
+            <div class = "settings">
+                <!-- <span class = "sub_settings">
+                    <button onclick="decrementStanza()" id = "decrement" class = "upDown">-</button>
+                    <input type = "number" readonly id = "stanzas" value ="4"></input>
+                    <button onclick="incrementStanza()" id = "increment" class = "upDown">+</button>
+                    
+                </span> -->
+                <span class = "sub_settings">
+                    <input type ="checkbox" id = "editToggle"></input>
+                    <label for = "editToggle">Edit result</label>
+                </span>
+                <span class = "sub_settings">
+                    <input type ="checkbox" id ="lineToggle"></input>
+                    <label for = "lineToggle">Line number</label>
+                </span>
+                <!-- <span class = "sub_settings">
+                    <input type ="checkbox" id ="firstLineEnd"></input>
+                    <label for = "firstLineEnd">Ends with first line</label>
+                </span> -->
+            </div>
             <div class = "stanza">
                 <p> Poem Title:</p>
                 <input type = "text" class = "line" placeholder = "Title here"></input> 
                 <p>Poet:</p>
                 <input type = "text" class = "line"value = "By:"></input> 
             </div>
-            <div class = "stanza" id = "first_stanza">
+            <div class = "stanza" id = "stanza_1">
                 <input type = "text" class = "line_1 line"></input><br>
                 <input type = "text" class = "line_2 line"></input><br>
                 <input type = "text" class = "line_3 line"></input><br>
                 <input type = "text" class = "line_4 line"></input><br>
             </div>
-            <div class = "stanza" id = "middle_stanza">
+            <div class = "stanza" id = "stanza_2">
                 <input type = "text" class = "line_2 line"></input><br>
                 <input type = "text" class = "line_5 line"></input><br>
                 <input type = "text" class = "line_4 line"></input><br>
                 <input type = "text" class = "line_6 line"></input><br>
             </div>
-            <div class = "stanza" id = "middle_stanza">
+            <div class = "stanza" id = "stanza_3">
                 <input type = "text" class = "line_5 line"></input><br>
                 <input type = "text" class = "line_7 line"></input><br>
                 <input type = "text" class = "line_6 line"></input><br>
                 <input type = "text" class = "line_8 line"></input><br>
             </div>
+            <div class = "stanza" id = "stanza_4">
+                <input type = "text" class = "line_7 line"></input><br>
+                <input type = "text" class = "line_9 line"></input><br>
+                <input type = "text" class = "line_8 line"></input><br>
+                <input type = "text" class = "line_10 line"></input><br>
+            </div>
+            <div class = "stanza" id = "stanza_5">
+                <input type = "text" class = "line_9 line"></input><br>
+                <input type = "text" class = "line_11 line"></input><br>
+                <input type = "text" class = "line_10 line"></input><br>
+                <input type = "text" class = "line_12 line"></input><br>
+            </div>
+            <div class = "stanza" id = "stanza_6">
+                <input type = "text" class = "line_11 line"></input><br>
+                <input type = "text" class = "line_13 line"></input><br>
+                <input type = "text" class = "line_12 line"></input><br>
+                <input type = "text" class = "line_14 line"></input><br>
+            </div>
+            <div class = "stanza" id = "stanza_7">
+                <input type = "text" class = "line_13 line"></input><br>
+                <input type = "text" class = "line_15 line"></input><br>
+                <input type = "text" class = "line_14 line"></input><br>
+                <input type = "text" class = "line_16 line"></input><br>
+            </div>
             
             <div class = "stanza" id = "last_stanza">
-                <input type = "text" class = "line_7 line"></input><br>
+                <input type = "text" class = "line_15 line"></input><br>
                 <input type = "text" class = "line_3 line"></input><br>
-                <input type = "text" class = "line_8 line"></input><br>
+                <input type = "text" class = "line_16 line"></input><br>
                 <input type = "text" class = "line_1 line"></input><br>
 
             </div>
             <div class = "button-holder">
-                <button onclick="DownloadPantoum()"> Download Poem! </button>
-                <button onclick="CopyPantoum()"> Copy Poem! </button>
+                <button onclick="DownloadPantoum()" class = "generateButton"> Download Poem! </button>
+                <button onclick="CopyPantoum()" class = "generateButton"> Copy Poem! </button>
                 <br><br>
                 <div class = "button-holder">
                 <textarea placeholder = "Copy from here" readonly id = "copyPantoum"> </textarea>

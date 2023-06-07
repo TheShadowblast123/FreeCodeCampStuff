@@ -10,14 +10,17 @@ div .stanza {
     padding: 1%;
     border-radius: 20px;
 }
-input {
-    width: 80%;
+input{
+   
     margin: 5px;
     background-color: black;
     color:bisque;
     height: 2.75vh;
     border-radius: 5px;
     box-shadow: 0 0 5px 0 rgba(27, 0, 0, 1);
+}
+.line {
+    width: 80%;
 }
 h1 {
     text-align:center;
@@ -41,7 +44,7 @@ h1 {
     /* 0.577 = tan(30deg)*/
     box-shadow: 0 0 px 10px var(--c3)
 }
-input:focus{
+.line:focus{
     width: 90%;
     color:white;
     border-color: white;
@@ -53,14 +56,14 @@ input:focus{
     padding : 10px;
 
 }
-button {
+button.generateButton{
     border-radius: 5px;
     background-color: bisque;
     border-color: hsl(0, 100%, 16%);
     width: 30%;
     height: 6vh;
 }
-button:hover {
+button:enabled:hover {
     background-color: white;
     box-shadow: 0 0 20px 0 rgba(112, 0, 0, 0.3);
 }
@@ -69,6 +72,4 @@ textarea {
     color:bisque;
     width: 100%;
     border-radius: 5px;
-    
-    
 }
