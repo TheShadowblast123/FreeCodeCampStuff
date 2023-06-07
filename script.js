@@ -9,9 +9,10 @@ const inputPairs = [
   { class: 'line_8' },
 
 ];
+
 let thirdLineFirstStanza = '';
 let firstLineFirstStanza = '';
-let stanzaCount = 4;// [2,4][3,6][4,8][5,10][6,12][7,14][8,16] lines = 2 * stanzaCount
+let stanzaCount = 4;
 const orderedInputs = document.el;
 const editToggle = document.getElementById('editToggle');
 const lineToggle = document.getElementById('lineToggle');
@@ -33,9 +34,6 @@ inputPairs.forEach(pair => {
     });
   });
 });
-const lines = document.querySelectorAll('.line');
-const linesArray = Array.from(lines);
-const stanzaCountElement = document.getElementById('stanzas')
 function DownloadPantoum() {
  
   let count = 0;
@@ -80,36 +78,3 @@ function CopyPantoum() {
   else copyArea.readOnly = true;
 
 }
-function incrementStanza() {
-  console.log("incrementing")
-  if(stanzaCount < 8){
-    stanzaCount++;
-    stanzaCountElement.value = stanzaCount;
-    decrementer.disabled = false;
-    funky();
-  }
-  if(stanzaCount == 8) incrementer.disabled = true;
-  
-}
-function decrementStanza() {
-  if(stanzaCount > 2){
-    stanzaCount--;
-    stanzaCountElement.value = stanzaCount;
-    incrementer.disabled = false;
-    funky()
-  } 
-  if(stanzaCount == 2) decrementer.disabled = true;
-  
-  
-}
-
-function funky() {
-  
-  console.log(stanzaCount);
-
-}
-/*Needed functionality
-
-  add/remove stanzas maybe
-  ending with first or third line
-  */

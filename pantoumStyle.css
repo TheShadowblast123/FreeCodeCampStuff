@@ -3,12 +3,24 @@ body{
     color: blanchedalmond;
     font-size: 120%;
 }
+.explainer {
+    margin: 4%;
+    background-color: rgba(255, 0, 0, 0.125);
+    border-radius: 20px;
+}
+em {
+   
+    margin: 5% 10% 5 10%;
+}
 div .stanza {
     background-color: rgba(255, 0, 0, 0.125);
     margin: 4%;
     text-align: center;
     padding: 1%;
     border-radius: 20px;
+}
+settings {
+    padding: 4%;
 }
 input{
    
@@ -72,4 +84,13 @@ textarea {
     color:bisque;
     width: 100%;
     border-radius: 5px;
+}
+.settings {
+    grid-template-rows: 1;
+    grid-template-columns: 2;
+    grid-auto-flow: row;
+    display: block;
+}
+.sub-settings {
+    display: grid;
 }
