@@ -9,7 +9,7 @@ const inputPairs = [
   { class: 'line_8' },
 
 ];
-
+const lines = document.querySelectorAll('.line');
 let thirdLineFirstStanza = '';
 let firstLineFirstStanza = '';
 let stanzaCount = 4;
