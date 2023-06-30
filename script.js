@@ -9,16 +9,13 @@ const inputPairs = [
   { class: 'line_8' },
 
 ];
-const lines = document.querySelectorAll('.line');
+
 let thirdLineFirstStanza = '';
 let firstLineFirstStanza = '';
-let stanzaCount = 4;
 const orderedInputs = document.el;
 const editToggle = document.getElementById('editToggle');
 const lineToggle = document.getElementById('lineToggle');
-const firstLineEnd = document.getElementById('firstLineEnd');
-const decrementer = document.getElementById('decrement');
-const incrementer = document.getElementById('increment');
+
 inputPairs.forEach(pair => {
   const { class: className } = pair;
   const inputs = document.querySelectorAll(`.${className}`);
@@ -35,7 +32,7 @@ inputPairs.forEach(pair => {
   });
 });
 function DownloadPantoum() {
- 
+  const lines = document.querySelectorAll('.line');
   let count = 0;
   let output = '';
   lines.forEach(line => {
@@ -52,7 +49,7 @@ function DownloadPantoum() {
   URL.revokeObjectURL(link.href);
 }
 function CopyPantoum() {
- 
+  const lines = document.querySelectorAll('.line');
   let count = 0;
   let output = '';
   lines.forEach(line => {
@@ -77,4 +74,57 @@ function CopyPantoum() {
   if(editToggle.checked)   copyArea.readOnly = false;
   else copyArea.readOnly = true;
 
+
+}
+function lineEnd() {
+  const firstLineEnd = document.getElementById('firstLineEnd');
+  const endLines = document.getElementsByClassName('end');
+
+  function lineEnd() {
+    if (firstLineEnd.checked) {
+      endLines[0].className = "line_3 line end";
+      endLines[1].className = "line_1 line end";
+  
+      removeEventListeners(inputPairs[0]);
+      removeEventListeners(inputPairs[2]);
+  
+      assignEventListeners(inputPairs[0]);
+      assignEventListeners(inputPairs[2]);
+    } else {
+      endLines[1].className = "line_3 line end";
+      endLines[0].className = "line_1 line end";
+  
+      removeEventListeners(inputPairs[1]);
+      removeEventListeners(inputPairs[3]);
+  
+      assignEventListeners(inputPairs[1]);
+      assignEventListeners(inputPairs[3]);
+    }
+  }
+  
+  function removeEventListeners(pair) {
+    const { class: className } = pair;
+    const inputs = document.querySelectorAll(`.${className}`);
+  
+    inputs.forEach(input => {
+      const clonedInput = input.cloneNode(true);
+      input.parentNode.replaceChild(clonedInput, input);
+    });
+  }
+  
+  function assignEventListeners(pair) {
+    const { class: className } = pair;
+    const inputs = document.querySelectorAll(`.${className}`);
+  
+    inputs.forEach(input => {
+      input.addEventListener('input', function(event) {
+        const newValue = event.target.value;
+        inputs.forEach(otherInput => {
+          if (otherInput !== event.target) {
+            otherInput.value = newValue;
+          }
+        });
+      });
+    });
+  }
 }
