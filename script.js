@@ -65,7 +65,6 @@ function CopyPantoum() {
       } else output += "\t" + line.value + '\n';
     }
       count++;
-    
   });
   const copyArea = document.getElementById("copyPantoum");
   copyArea.value = output;
@@ -73,8 +72,6 @@ function CopyPantoum() {
   copyArea.style.height = copyArea.scrollHeight + 'px';
   if(editToggle.checked)   copyArea.readOnly = false;
   else copyArea.readOnly = true;
-
-
 }
 function lineEnd() {
   const firstLineEnd = document.getElementById('firstLineEnd');
@@ -87,7 +84,6 @@ function lineEnd() {
   
       removeEventListeners(inputPairs[0]);
       removeEventListeners(inputPairs[2]);
-  
       assignEventListeners(inputPairs[0]);
       assignEventListeners(inputPairs[2]);
     } else {
@@ -96,7 +92,6 @@ function lineEnd() {
   
       removeEventListeners(inputPairs[1]);
       removeEventListeners(inputPairs[3]);
-  
       assignEventListeners(inputPairs[1]);
       assignEventListeners(inputPairs[3]);
     }
