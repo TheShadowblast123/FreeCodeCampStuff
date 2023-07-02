@@ -48,7 +48,7 @@ function DownloadPantoum() {
   if(lines[0].value = '')
     link.download = "Pantoum Draft.txt";
   else
-    link.download = f`${lines[0].value}.txt`;
+    link.download = `${lines[0].value}.txt`;
   link.click();
   URL.revokeObjectURL(link.href);
 }

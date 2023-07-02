@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Sestina Drafter | Shadow's Den</title>
+
+        <link rel="stylesheet" href="pantoumStyle.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+            <h1>Web Pantoum Drafter</h1>
+
+        </header>
+
+        <div class = "stanza-background-container">
+            <div class = "stanza-background-container">
+                <div class = "explainer">
+                    <div>
+                        <h2>What is a Sestina?</h2>
+                        <p><i>
+                            A sestina is a complex poetic form consisting of six stanzas, 
+                            each with six lines, and a concluding tercet. 
+                            It involves a pattern of repetitive end-words throughout the poem, 
+                            creating an intricate interplay of repetition and variation.
+                        </i> </p>
+                    </div>
+                    <div>
+                        <h2>That sounds cool! But isn't it hard?</h2>
+                        <p><i>
+                            The sestina drafter helps you tame the poem's winding nature, 
+                            crafting beauty with ease. Start your draft and witness the end words preview future lines, 
+                            freeing you to consider the poem, not the swirling form. 
+                            Simplify the process, unleash your creativity, 
+                            and embrace the beauty of the sestina.
+                        </i> </p>
+                    </div>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input oninput ="line(0)" type = "text" class = "line"></input><br>
+                    <input oninput ="line(1)" type = "text" class = "line"></input><br>
+                    <input oninput ="line(2)" type = "text" class = "line"></input><br>
+                    <input oninput ="line(3)" type = "text" class = "line"></input><br>
+                    <input oninput ="line(4)" type = "text" class = "line"></input><br>
+                    <input oninput ="line(5)" type = "text" class = "line"></input><br>
+                </div>
+                <div class = "button-holder">
+
+                    <button onclick="Copy()" class = "generateButton"> Copy Poem! </button>
+                    <br><br>
+                    <div class = "button-holder">
+                    <textarea placeholder = "Copy from here" readonly id = "copy"> </textarea>
+                    </div>
+                </div> 
+        </div>
+        <script src = "sestina.js">
+        </script>
+    </body>
+</html>
