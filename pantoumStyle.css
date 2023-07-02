@@ -109,6 +109,9 @@ textarea {
     input {
         font-size: 2.25vw;
     }
+    button {
+        font-size: 3vw;
+    }
 }
 @media screen and (min-width: 700px) and (max-width: 1000px) {
     body {
@@ -120,6 +123,9 @@ textarea {
     input {
         font-size: 2vw;
     }
+    button {
+        font-size: 2.5vw;
+    }
 }
 @media screen and (min-width: 1000px) {
     body {
@@ -130,5 +136,8 @@ textarea {
     }
     input {
         font-size: 1.75vw;
+    }
+    button {
+        font-size: 2vw;
     }
 }
