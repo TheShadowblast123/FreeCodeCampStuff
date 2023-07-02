@@ -25,12 +25,7 @@
                     <p><i>The repeating nature of the poem is difficult to tame, but very beautiful when executed well, and that's the point of this drafter! 
                         Simply start drafting your poem and the lines will show up where they're supposed to go, so you only have to think of the poem as a whole!</i> </p>
                 </div>
-                <div>
-                    <h3>What do the settings do?</h3>
-                    <p><i>Edit result allows you to edit the result after selecting the copy option. 
-                        Line number shows line numbers. 
-                        First line end determines whether or not the pantoum ends on the first or third line.</i> </p>
-                </div>
+
             </div>
             <div class = "settings">
                 <h3>Settings</h3>
@@ -42,10 +37,6 @@
                     <input type ="checkbox" id ="lineToggle"></input>
                     <label for = "lineToggle">Line number</label>
                 </span>
-                <span class = "sub_settings">
-                    <input onclick="lineEnd()" type ="checkbox" id ="firstLineEnd"></input>
-                    <label for = "firstLineEnd">First line end</label>
-                </span>
             </div>
             <div class = "stanza">
                 <p> Poem Title:</p>
@@ -54,28 +45,28 @@
                 <input type = "text" class = "line"value = "By:"></input> 
             </div>
             <div class = "stanza" id = "stanza_1">
-                <input type = "text" class = "line_1 line"></input><br>
-                <input type = "text" class = "line_2 line"></input><br>
-                <input type = "text" class = "line_3 line"></input><br>
-                <input type = "text" class = "line_4 line"></input><br>
+                <input placeholder="1" type = "text" class = "line_1 line"></input><br>
+                <input placeholder="2" type = "text" class = "line_2 line"></input><br>
+                <input placeholder="3" type = "text" class = "line_3 line"></input><br>
+                <input placeholder="4" type = "text" class = "line_4 line"></input><br>
             </div>
             <div class = "stanza" id = "stanza_2">
-                <input type = "text" class = "line_2 line"></input><br>
-                <input type = "text" class = "line_5 line"></input><br>
-                <input type = "text" class = "line_4 line"></input><br>
-                <input type = "text" class = "line_6 line"></input><br>
+                <input placeholder="2" type = "text" class = "line_2 line"></input><br>
+                <input placeholder="5" type = "text" class = "line_5 line"></input><br>
+                <input placeholder="4" type = "text" class = "line_4 line"></input><br>
+                <input placeholder="6" type = "text" class = "line_6 line"></input><br>
             </div>
             <div class = "stanza" id = "stanza_3">
-                <input type = "text" class = "line_5 line"></input><br>
-                <input type = "text" class = "line_7 line"></input><br>
-                <input type = "text" class = "line_6 line"></input><br>
-                <input type = "text" class = "line_8 line"></input><br>
+                <input placeholder="5" type = "text" class = "line_5 line"></input><br>
+                <input placeholder="7" type = "text" class = "line_7 line"></input><br>
+                <input placeholder="6" type = "text" class = "line_6 line"></input><br>
+                <input placeholder="8" type = "text" class = "line_8 line"></input><br>
             </div>
             <div class = "stanza" id = "stanza_4">
-                <input type = "text" class = "line_7 line"></input><br>
-                <input type = "text" class = "line_1 line end"></input><br>
-                <input type = "text" class = "line_8 line"></input><br>
-                <input type = "text" class = "line_3 line end"></input><br>
+                <input placeholder="7" type = "text" class = "line_7 line"></input><br>
+                <input placeholder="1" type = "text" class = "line_1 line "></input><br>
+                <input placeholder="8" type = "text" class = "line_8 line"></input><br>
+                <input placeholder="3" type = "text" class = "line_3 line"></input><br>
             </div>
             <div class = "button-holder">
                 <button onclick="DownloadPantoum()" class = "generateButton"> Download Poem! </button>

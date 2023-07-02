@@ -4,9 +4,8 @@ endWords.forEach(n => {
     n = ' ';
 });
 function line(i: number): void{ 
-    const temp1 = lines[i].value.trim()
-    const temp2 = temp1.split(" ")
-    endWords[i] = temp2[temp2.length -1];
+    const temp = lines[i].value.trim().split(" ")
+    endWords[i] = temp[temp.length -1];
 }
 function Copy() {
     let tempEnd = endWords
@@ -30,8 +29,4 @@ function Copy() {
     copyArea.value = output;
     copyArea.style.height = 'auto';
     copyArea.style.height = copyArea.scrollHeight + 'px';
-
-    copyArea.readOnly = true;
-
-
 }

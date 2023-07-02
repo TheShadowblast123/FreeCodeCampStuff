@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Villanelle Drafter | Shadow's Den</title>
+
+        <link rel="stylesheet" href="pantoumStyle.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+            <h1>Web Villanelle Drafter</h1>
+
+        </header>
+
+        <div class = "stanza-background-container">
+            
+                <div class = "explainer">
+                    <div>
+                        <h2>What is a Villanelle?</h2>
+                        <p><i>
+                            A Villanelle is a 19-line poetic form known for its repetitive structure and rhyme scheme. 
+                            It consists of five tercets and a quatrain, 
+                            with specific lines repeated throughout the poem. 
+                            The repetition creates a distinct rhythm and highlights key themes or ideas.
+                        </i> </p>
+                    </div>
+                    <div>
+                        <h2>So how does this help?</h2>
+                        <p><i>
+                            You write the first tercet rhyming the first and third lines and the drafter will fill out a format.
+                            This format will contain the necessary rhyme scheme and fill out the repeated
+                            lines required to continue the poem. You can decide to either download 
+                            the format or copy it to continue working in another editor.
+                        </i> </p>
+                    </div>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="This should rhyme" oninput ="line(0)" type = "text" class = "line"></input><br>
+                    <input placeholder="Not rhyming here is okay!"oninput ="line(1)" type = "text" class = "line"></input><br>
+                    <input placeholder="With this little line" type = "text" class = "line"></input><br>
+                </div>
+                <div class = "button-holder">
+
+                    <button onclick="Copy()" class = "generateButton"> Copy Poem! </button>
+                    <br><br>
+                    <div class = "button-holder">
+                    <textarea placeholder = "Copy from here" readonly id = "copy"> </textarea>
+                    </div>
+                </div> 
+        </div>
+        <script src = "villanelle.js">
+        </script>
+    </body>
+</html>

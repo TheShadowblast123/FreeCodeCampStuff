@@ -1,5 +1,5 @@
 var lines = document.getElementById("stanza").querySelectorAll('input');
-var endWords = ['', '', '', '', '', ''];
+var endWords = ['', '', ''];
 endWords.forEach(function (n) {
     n = ' ';
 });
@@ -8,23 +8,22 @@ function line(i) {
     endWords[i] = temp[temp.length - 1];
 }
 function Copy() {
+    //A1 b A2 / a b A1 / a b A2 / a b A1 / a b A2 / a b A1 A2
     var tempEnd = endWords;
     var output = '';
     lines.forEach(function (line) {
         output += line.value + '\n';
     });
-    output += '\n' + 'Continuation' + '\n\n';
-    for (var i = 0; i < lines.length - 1; i++) {
-        var next_order = [tempEnd[5], tempEnd[0], tempEnd[4], tempEnd[1], tempEnd[3], tempEnd[2]];
-        for (var x = 0; x < lines.length; x++)
-            output += next_order[x] + '\t';
-        output += '\n\n';
-        tempEnd = next_order;
+    output += '\n';
+    for (var i = 0; i < 3; i++) {
+        output += endWords[0] + '\n' + endWords[1] + '\n';
+        if (i % 2 != 0)
+            output += lines[0].value + '\n\n';
+        else
+            output += lines[2].value + '\n\n';
     }
-    output += 'Envoi' + '\n\n'
-        + endWords[1] + '\t' + endWords[4] + '\n'
-        + endWords[3] + '\t' + endWords[2] + '\n'
-        + endWords[0] + '\t' + endWords[5];
+    output += endWords[0] + '\n' + endWords[1] + '\n' +
+        lines[0].value + '\n' + lines[2].value + '\n\n';
     var copyArea = document.getElementById("copy");
     copyArea.value = output;
     copyArea.style.height = 'auto';
