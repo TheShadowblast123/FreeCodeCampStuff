@@ -17,7 +17,7 @@ function Copy() {
     output += '\n';
     for (var i = 0; i < 3; i++) {
         output += endWords[0] + '\n' + endWords[1] + '\n';
-        if (i % 2 != 0)
+        if (i % 2 == 0)
             output += lines[0].value + '\n\n';
         else
             output += lines[2].value + '\n\n';
