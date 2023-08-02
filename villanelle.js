@@ -30,7 +30,7 @@ for(let i = 0; i < 21; i++){
 var inputs = [];
 Array.from(document.querySelectorAll("#stanza input")).forEach((input) => {
     inputs.push(input);
-    console.log(input);
+    
 });
 function CreatePoem(showsLineCount) {
     var count = 1;
