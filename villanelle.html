@@ -1,53 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html id ="villanelle">
     <head>
         <title>Web Villanelle Drafter | Shadow's Den</title>
-
         <link rel="stylesheet" href="pantoumStyle.css">
     </head>
     <body>
         <header>
             <h1>Web Villanelle Drafter</h1>
-
         </header>
-
         <div class = "stanza-background-container">
-            
                 <div class = "explainer">
                     <div>
-                        <h2>What is a Villanelle?</h2>
+                        <h2>What is a villanelle?</h2>
                         <p><i>
-                            A Villanelle is a 19-line poetic form known for its repetitive structure and rhyme scheme. 
-                            It consists of five tercets and a quatrain, 
-                            with specific lines repeated throughout the poem. 
-                            The repetition creates a distinct rhythm and highlights key themes or ideas.
+                            A Villanelle is a highly structured and intricate form of poetry that consists of 19 lines. 
+                            It originated from the Italian pastoral song and was popularized in English literature during the 19th and 20th centuries. 
+                            Villanelles often explore complex emotions, 
+                            existential questions, or meditations on time, memory, and change. 
+                            The strict structure challenges poets to craft each line with precision and to create a cohesive and powerful whole.
                         </i> </p>
                     </div>
                     <div>
                         <h2>So how does this help?</h2>
                         <p><i>
-                            You write the first tercet rhyming the first and third lines and the drafter will fill out a format.
-                            This format will contain the necessary rhyme scheme and fill out the repeated
-                            lines required to continue the poem. You can decide to either download 
-                            the format or copy it to continue working in another editor.
+                           Selecting words shows a pop up of rhymes to inspire you and synonyms in case you find you've run into a syllable issue
+
                         </i> </p>
                     </div>
+                    <div class = "settings">
+                        <h3>Settings</h3>
+                        <span class = "sub_settings">
+                            <input type ="checkbox" id ="lineToggle"></input>
+                            <label for = "lineToggle">Line number</label>
+                        </span>
+                    </div>
+                </div>
+                <div class = "stanza">
+                    <p> Poem Title:</p>
+                    <input type = "text" class = "line" placeholder = "Title here"></input> 
+                    <p>Poet:</p>
+                    <input type = "text" class = "line"value = "By:"></input> 
                 </div>
                 <div class = "stanza" id = "stanza">
-                    <input placeholder="This should rhyme" oninput ="line(0)" type = "text" class = "line"></input><br>
-                    <input placeholder="Not rhyming here is okay!"oninput ="line(1)" type = "text" class = "line"></input><br>
-                    <input placeholder="With this little line" type = "text" class = "line"></input><br>
+                    <input placeholder="A1" 
+                           type = "text"
+                           class = "line line_1"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A2" 
+                           type = "text" 
+                           class = "line line_2"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A1" 
+                           type = "text" 
+                           class = "line line_1"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A2" 
+                           type = "text" 
+                           class = "line line_2"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A1" 
+                           type = "text" 
+                           class = "line line_1"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A2" 
+                           type = "text" 
+                           class = "line line_2"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A1" 
+                           type = "text" 
+                           class = "line line_1"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A2" 
+                           type = "text" 
+                           class = "line line_2"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
                 </div>
                 <div class = "button-holder">
 
-                    <button onclick="Copy()" class = "generateButton"> Copy Poem! </button>
+                    <button onclick="ToEditor()" class = "generateButton"> Copy Poem! </button>
+                    <button onclick="DownloadFile()" class = "generateButton"> Download Poem! </button>
                     <br><br>
                     <div class = "button-holder">
-                    <textarea placeholder = "Copy from here" readonly id = "copy"> </textarea>
+                    <textarea placeholder = "Copy from here" readonly id = "EditArea"> </textarea>
                     </div>
                 </div> 
         </div>
+
         <script src = "villanelle.js">
+           
         </script>
     </body>
 </html>

@@ -42,40 +42,40 @@
                 <input type = "text" class = "line"value = "By:"></input> 
             </div>
             <div class = "stanza" id = "stanza_1">
-                <input placeholder="1" type = "text" class = "line_1 line"></input><br>
-                <input placeholder="2" type = "text" class = "line_2 line"></input><br>
-                <input placeholder="3" type = "text" class = "line_3 line"></input><br>
-                <input placeholder="4" type = "text" class = "line_4 line"></input><br>
+                <input placeholder="1" type = "text" class = "line_1 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="2" type = "text" class = "line_2 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="3" type = "text" class = "line_3 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="4" type = "text" class = "line_4 line" oninput = "handleChange(this)"></input><br>
             </div>
             <div class = "stanza" id = "stanza_2">
-                <input placeholder="2" type = "text" class = "line_2 line"></input><br>
-                <input placeholder="5" type = "text" class = "line_5 line"></input><br>
-                <input placeholder="4" type = "text" class = "line_4 line"></input><br>
-                <input placeholder="6" type = "text" class = "line_6 line"></input><br>
+                <input placeholder="2" type = "text" class = "line_2 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="5" type = "text" class = "line_5 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="4" type = "text" class = "line_4 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="6" type = "text" class = "line_6 line" oninput = "handleChange(this)"></input><br>
             </div>
             <div class = "stanza" id = "stanza_3">
-                <input placeholder="5" type = "text" class = "line_5 line"></input><br>
-                <input placeholder="7" type = "text" class = "line_7 line"></input><br>
-                <input placeholder="6" type = "text" class = "line_6 line"></input><br>
-                <input placeholder="8" type = "text" class = "line_8 line"></input><br>
+                <input placeholder="5" type = "text" class = "line_5 line" oninput = "handleChange(this)" ></input><br>
+                <input placeholder="7" type = "text" class = "line_7 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="6" type = "text" class = "line_6 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="8" type = "text" class = "line_8 line" oninput = "handleChange(this)"></input><br>
             </div>
             <div class = "stanza" id = "stanza_4">
-                <input placeholder="7" type = "text" class = "line_7 line"></input><br>
-                <input placeholder="1" type = "text" class = "line_1 line "></input><br>
-                <input placeholder="8" type = "text" class = "line_8 line"></input><br>
-                <input placeholder="3" type = "text" class = "line_3 line"></input><br>
+                <input placeholder="7" type = "text" class = "line_7 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="1" type = "text" class = "line_1 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="8" type = "text" class = "line_8 line" oninput = "handleChange(this)"></input><br>
+                <input placeholder="3" type = "text" class = "line_3 line" oninput = "handleChange(this)"></input><br>
             </div>
             <div class = "button-holder">
-                <button onclick="DownloadPantoum()" class = "generateButton"> Download Poem! </button>
-                <button onclick="CopyPantoum()" class = "generateButton"> Copy Poem! </button>
+                <button onclick="DownloadFile()" class = "generateButton"> Download Poem! </button>
+                <button onclick="ToEditor()" class = "generateButton"> Copy Poem! </button>
                 <br><br>
                 <div class = "button-holder">
-                <textarea placeholder = "Copy from here" readonly id = "copyPantoum"> </textarea>
+                    <textarea placeholder = "Copy from here" readonly id = "EditArea"> </textarea>
                 </div>
             </div> 
             
         </div>
-        <script src = "script.js">
+        <script src = "pantoum.js">
         </script>
     </body>
 </html>
