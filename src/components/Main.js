@@ -17,33 +17,35 @@ function Index() {
   }, /* @__PURE__ */ React.createElement(Tile, {
     image: "https://api2.sololearn.com/v2/certificates/CC-5FHRBPC5/image/png",
     desc: "Sololearn Javascript Intermediate Certificate",
-    link: "react-portfolio\\web.html#web"
+    link: "./web.html#web"
   }), /* @__PURE__ */ React.createElement(Tile, {
     image: "https://api2.sololearn.com/v2/certificates/CC-XZ5VYIRP/image/png",
-    desc: "Sololearn SQL Introduction Certificate"
+    desc: "Sololearn SQL Introduction Certificate",
+    link: "./sql.html"
   }), /* @__PURE__ */ React.createElement(Tile, {
     image: "https://api2.sololearn.com/v2/certificates/CC-4ULTJ16U/image/png",
     desc: "Sololearn Javascript Introduction Certificate",
-    link: "react-portfolio\\web.html#web"
+    link: "./web.html#web"
   }), /* @__PURE__ */ React.createElement(Tile, {
     image: "https://api2.sololearn.com/v2/certificates/CC-QAYLSDMT/image/png",
     desc: "Sololearn CSS Introduction Certificate",
-    link: "react-portfolio\\web.html#web"
+    link: "./web.html#web"
   }), /* @__PURE__ */ React.createElement(Tile, {
     image: "https://api2.sololearn.com/v2/certificates/CC-IP6MDCTZ/image/png",
     desc: "Sololearn HTML Introduction Certificate",
-    link: "react-portfolio\\web.html#web"
+    link: "./web.html#web"
   }), /* @__PURE__ */ React.createElement(Tile, {
     image: "./media/js_cert.jpg",
     desc: "freeCodeCamp Javascript Certificate",
-    link: "react-portfolio\\web.html#web"
+    link: "./web.html#web"
   }), /* @__PURE__ */ React.createElement(Tile, {
     image: "./media/python_cert.jpg",
-    desc: "freeCodeCamp python Certificate"
+    desc: "freeCodeCamp python Certificate",
+    link: "./sql.html"
   }), /* @__PURE__ */ React.createElement(Tile, {
     image: "./media/web_cert.jpg",
     desc: "freeCodeCamp Web Development Certificate",
-    link: "./web.html"
+    link: "./web.html#web"
   }));
 }
 const projectGray = "rounded-lg bg-gray-900 grid grid-cols-2 p-8";
@@ -113,6 +115,13 @@ function Web() {
   }));
 }
 function Sql() {
+  return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(Project, {
+    style: projectGray,
+    link: "projects\\documentation.html",
+    image: "media/documentation.jpg",
+    heading: "Technical Documentation Project",
+    desc: 'Every developer will at one point write documentation. Every good developer will eventually read documentation. This project focuses on creating some form of documentation for something. At the time, I was learning python and I decided to make a "Pantoum Generator" to get some practice in. The project was very instructive on the basic syntax of python and it really helped me understand how it works. Click the image to see the techincal documentation.'
+  }));
 }
 const Main = (props) => {
   console.log(props.heritage);
