@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Survey | Shadow's Den</title>
+    <link rel="stylesheet" href="survey.css">
+  </head>
+  <body>
+    <div>
+      <h1 id="title"> Survey Form</h1>
+      <p id ="description">Help me make a better website experience</p>
+    </div>
+
+    <div>
+      <form id="survey-form">
+        <div id="form-Group">
+          <label id="name-label">Name (Required):</label><br>
+          <input id="name" name="name" type ="text" placeholder="Enter your name" required><br>
+        </div>
+          <div id="form-Group">
+          <label id="email-label">Email (Required):</label><br>
+          <input id="email" name="email" type ="email" placeholder="Enter your email" required><br>
+        </div>
+        <div id="form-Group">
+          <label id="number-label">Rate out of Ten:</label><br>
+          <input id="number" type ="number" name="age" min= "-10" max="69" placeholder="Rate"><br>
+        </div>
+        
+        <div id="form-Group">
+          <p id = "section">Does the website look good?</p><br>
+          <input name = "beauty_rating" id="yes" type ="radio" value = "yes">
+          <label for="yes">Yes</label><br>
+          <input name = "beauty_rating" id="no" type ="radio" value = "no">
+          <label for="no">No</label><br>
+          <input name = "beauty_rating" id="ehh" type ="radio" value = "ehh">
+          <label for="ehh">Ehh</label><br>
+          <input name = "beauty_rating" id="stop" type ="radio" value = "yes">
+          <label for="stop">Please stop</label><br>
+        </div>
+          <div id="form-Group">
+          What could be improved?<br>
+          <input name = "improvement" id="layout" type ="checkbox" value = "layout">
+          <label for="layout">Layout</label><br>
+          <input name = "improvement" id="behavior" type ="checkbox" value = "behavior">
+          <label for="behavior">Behavior</label><br>
+          <input name = "improvement" id="style" type ="checkbox" value = "style">
+          <label for="style">Style</label><br>
+          <input name = "improvement" id="memes" type ="checkbox" value = "memes">
+          <label for="memes">Memes</label><br>
+        </div>
+
+
+        
+        <select id="dropdown" required>
+          <option value=""> What best describes you?</option>
+          <option value="guest"> Guest</option>
+          <option value="fan"> Fan</option>
+          <option value="mutya"> <3</option>
+          <option value="employer"> Employer</option>
+          <option value="fun-guest"> how did I get here?</option>
+        </select><br>
+        <div id ="form-group">
+          Any comments or suggestions?<br>
+          <textarea placeholder="Type any extra comments here" name ="comment" wrap ="hard"></textarea>
+        <div id ="hold">
+          <input id="submit"type="submit">
+        </div>
+        
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>

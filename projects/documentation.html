@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Pantoum Generator Documentation</title>
+    <link rel="stylesheet" href="documentation.css">
+  </head>
+  
+  <body>
+    <nav id="navbar">
+      <header> <h1>Pantoum Generator Documentation</h1></header>
+      <ul>
+        <li><a class="nav-link" href="#Explanation_of_the_Pantoum">Explanation of the Pantoum</a></li>
+        <li>
+          <a class="nav-link" href="#Functional_Overview">Functional Overview</a>
+        </li>
+        <li><a class="nav-link" href="#Key_Functionality">Key Functionality</a></li>
+        <li>
+          <a class="nav-link" href="#The_Code">The Code</a>
+        </li>
+        <li><a class="nav-link" href="#Future_Plans_and_Critique">
+Future Plans and Critique</a></li>
+        
+          
+        
+        
+      </ul>
+    </nav>
+    <main id="main-doc">
+  
+      <section class="main-section" id="Explanation_of_the_Pantoum">
+      <header> <h2>Explanation of the Pantoum</h2> </header>
+       <article>
+         <h3>Description of the Form</h3>
+        <p>A pantoum is a poem form that heavily relies on repetition. With each new stanza incorporating lines from the previous, the pantoum is a form that requires dillegence, but with my pantoum generator, you can very quickly make a first draft.</p>
+        <h3>Explanation of the Form</h3>
+        <p>Explaining the form of the pantoum is tricky but once understood its beauty can be appreciated. Let's make a test stanza that will show how the form works. First we need a new stanza: </p>
+        <div style="line-height: 0">
+          <p class="first_line">Here's a first line</p>
+          <p class="second_line">Here's a second</p>
+          <p class="third_line"> Let's add in a third</p>
+          <p class="fourth_line"> And after, a fourth</p>
+        </div>
+        <p>The color coding will help with following what happens after this stanza. Now let's continue the form into a second stanza.</p>
+        <div style="line-height: 0">
+          <p class="first_line">Here's a second</p>
+          <p class="second_line">This is the first new line</p>
+          <p class="third_line"> And after, a fourth</p>
+          <p class="fourth_line"> This is the other new line</p>
+        </div>
+        <p>Lines 2 and 4 of the first stanza are now lines 1 and 3 in stanza 2. This pattern of the even lines of the previous stanza becoming the odd lines of the new stanza continues until the final stanza. Here's an example final stanza if we made a 3 stanza pantoum with the previous two stanzas.</p>
+        <div style="line-height: 0">
+          <p class="first_line">This is the first new line</p>
+          <p class="second_line">Here's a first line</p>
+          
+          <p class="third_line">This is the other new line </p>
+          <p class="fourth_line">Let's add in a third</p>
+          
+        </div>
+        <p>As you can see we end up using the two odd lines of the first stanza in order to finish the form, making them the even lines and ending with the first lines of the poem. Now here's an actual poem example of a pantoum I wrote, that this generator could help draft.</p>
+        <h4>Summer Night</h4>
+        <h5>by Anthony Ewell</h5>
+        <div style="line-height: 0">
+          <p>1 Her heavenly cherry berry ice lips</p>
+          <p>2 tasting of dragon fruit on a summer day,</p>
+          <p>3 that stretches out from Belize to Croatia,</p>
+          <p>4 is a sweetness I dream of every night.</p>
+        </div>
+        </div><br>
+        <div style="line-height: 0">
+          <p>2 The taste of dragon fruit on a summer day,</p>
+          <p>5 while we saunter and surmise,</p>
+          <p>4 is a sweetness I dream of every night,</p>
+          <p>6 like her wearing a diamond ring.</p>
+          </div><br>
+        <div style="line-height: 0">
+          <p>5 While we saunter and surmise,</p>
+          <p>7 what would it be like to see</p>
+          <p>6 something like her wearing a diamond ring</p>
+          <p>8 covered by a bridal veil?</p>
+          </div><br>
+        <div style="line-height: 0">
+          <p>7 What would it be like to see</p>
+          <p>1 her heavenly cherry berry ice lips</p>
+          <p>8 covered by a bridal veil</p>
+          <p>3 that stretches out from Belize to Croatia?</p>
+          </div><br>
+          
+       </article>
+      </section>
+      <section class="main-section" id="Functional_Overview">
+        <header><h2>Functional Overview</h2></header>
+         <article>
+           <h3>Elaborating the Problem being solved</h3>
+           <p>Now recognizing the pattern that emerges from a pantoum, It was very simple to divide the work into reasonable sections. These sections are just individual functions.</p><br>
+           <code><span style ="color: #1f3aa1">def</span><span style = "color:#c9b25e"> first_line_input</span>()</code><br>
+           <p>This function serves the purpose of starting the pantoum and the automation of the ordering of lines. There's a general purpose function for the rest of the poem however due to the ending it is necessary to handle the first line differently.</p><br>
+           <code><span style ="color: #1f3aa1">def</span><span style = "color:#c9b25e"> last_line</span>()</code><br>
+           <p>This function serves the purpose of completing the pantoum using data saved from the <code><span style ="color: #1f3aa1">def</span><span style = "color:#c9b25e"> first_line_input</span>()</code> function. Due to the way that the last stanza is constructed, this too could not be placed in the general purpose function without using for loops.</p><br>
+           <code><span style ="color: #1f3aa1">def</span><span style = "color:#c9b25e"> middle_line</span>()</code><br>
+           <p>This is the general purpose code to generate the stanzas for the form. This function automatically sorts the lines inputed properly and adds them to the outputted. </p><br>
+           <code><span style ="color: #1f3aa1">def</span><span style = "color:#c9b25e"> generate_pantoum</span>()</code><br>
+           <p>This function runs all of the previous functions in the correct order to provide the return the output of the desired poem</p><br>
+            <h3>The Method</h3>
+            <p>The main trick to solving the problem of ordering the lines is that as long as we know the lines from the previous stanza that will go on to be new lines in the next stanza, we then know that the poet will only be writing lines 2 and 4 of the new stanza. This is to say that given a stanza [a, b, c d] we already know that the next stanza will be at least [b, _, d, _] where the underscores are new inputs or the lines from the first stanza [w, x, y, z] where the result would be [b, w, d, y].</p>
+            <p>This effectively means we only need a few temporary variables to keep track of the first lines of the poem, and a few such variables for the previous two lines of the previous stanza.</p>
+         </article> 
+      </section>
+      <section class="main-section" id="Key_Functionality">
+       <header> <h2>Key Functionality</h2> </header>
+         <article>
+           <code>    poem += next_line+ linebreak + linebreak<br>
+    hold_old_line2 = next_line</code>
+          <p>This is the part where we're using temporary variables to cache the previous values while adding them on to the poem. This means there's no need for counting beyond a simple for loop.</p>
+          <h3>Time Complexity</h3>
+            <p>In order to complete this process, the time complexity is O(n) where n is the number of lines long the stanza is.The memory complexity is O(1) as the only memory usage is for the first stanza and for caching and immediately replacing the used memory with new data.</p>
+
+         </article> 
+      </section>
+      <section class="main-section" id="The_Code">
+      <header>  <h2>The Code</h2></header>
+         <article>
+           <code>
+             line1 = <span style="color:#a14f38">''</span><br>
+line2 = <span style="color:#a14f38">''</span><br>
+line3 = <span style="color:#a14f38">''</span><br>
+line4 = <span style="color:#a14f38">''</span><br>
+hold_old_line1 = <span style="color:#a14f38">''</span><br>
+hold_old_line2 = <span style="color:#a14f38">''</span><br>
+poem = <span style="color:#a14f38">''</span><br>
+linebreak = <span style="color:#a14f38">'\n'</span><br>
+<span style ="color: #1f3aa1">def</span><span style = "color:#c9b25e"> first_line_input</span>():<br>
+    <span style ="color: #1f3aa1">global</span> line1, line2, line3, line4, hold_old_line1, hold_old_line2, poem<br>
+    print(<span style="color:#a14f38">"Enter the four initial lines of the poem:"</span>)<br>
+    #getting values from input<br>
+    a = input()<br>
+    b = input()<br>
+    c = input()<br>
+    d = input()<br>
+    #setting them for the poem<br>
+    line1 = a<br>
+    line2 = b<br>
+    line3 = c<br>
+    line4 = d<br>
+    
+    #preping for the next stanza<br>
+    hold_old_line1 = b<br>
+    hold_old_line2 = d<br>
+    poem += a + linebreak + b + linebreak + c + linebreak + d + linebreak<br>
+    return<br>
+<span style ="color: #1f3aa1">def</span><span style = "color:#c9b25e"> last_line</span>():<br>
+    <span style ="color: #1f3aa1">global</span> poem, hold_old_line1, hold_old_line2<br>
+    poem += hold_old_line1 + linebreak + line3 + linebreak + hold_old_line2 + linebreak + line1<br>
+    return<br>
+    
+<span style ="color: #1f3aa1">def</span><span style = "color:#c9b25e"> middle_line</span>():<br>
+    #prep line 1<br>
+    <span style ="color: #1f3aa1">global</span> poem, hold_old_line1, hold_old_line2<br>
+    poem += hold_old_line1 + linebreak<br>
+    next_line = input()<br>
+    
+    #set line 2 and 3<br>
+    poem += next_line + linebreak + hold_old_line2 + linebreak<br>
+    hold_old_line1 = next_line #prep for next stanza<br>
+    next_line = input()<br>
+    #set line 4<br>
+    poem += next_line+ linebreak + linebreak<br>
+    hold_old_line2 = next_line #prep for next stanza<br>
+    print (<span style="color:#a14f38">'this is the poem so far'</span>)<br>
+    print (poem)<br>
+    return<br>
+
+<span style ="color: #1f3aa1">def</span><span style = "color:#c9b25e"> generate_pantoum</span>(): <br>
+    <span style ="color: #1f3aa1">global</span> poem <br>
+    first_line_input() <br>
+    
+    lines = [line1, line2, line3, line4] <br>
+    print(lines) <br>
+    
+    # Input the number of stanzas for the poem<br>
+    num_stanzas = int(input(<span style="color:#a14f38">"Enter the number of stanzas you want in the poem: "</span>)) <br>
+
+    for i in range(num_stanzas - 1): <br>
+        <span style = "color:#c9b25e"> middle_line</span>() <br>
+    last_line() <br>
+    return poem<br>
+
+print(generate_pantoum())<br>
+             </code>
+         </article> 
+      </section>
+      <section class="main-section" id="Future_Plans_and_Critique">
+       <header> <h2>Future Plans and Critique</h2></header>
+         <article>
+           <h3>Critiques</h3>
+          <p>The first critique I would have for this design is that it is only good at making drafts as you cannot edit previous data. Also only outputting to console isn't very user friendly barring that the user is already very much a technical person. At this point, I have yet to make an interface for this project, but I wish to do so sometime in the near future. Another thing is that there are variables that aren't used to their full potential. You also must go in one direction in order to creat this poem.</p>
+          <h3>Plans</h3>
+          <ul>
+            <li>Add interface</li>
+            <li>Allow line by line editing</li>
+            <li>.txt and .doc imports</li>
+            <li>.txt and other file exports</li>
+            <li>Bigger overall program integration</li>
+                                </ul>
+          <p>Adding all of this extra functionality will require some heavy additions to the program and handling of cases that I have not accounted for, but would result in a better experience for the poets.</p>
+
+         </article> 
+      </section>
+    </main>
+  </body>
+</html>

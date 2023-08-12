@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html id ="villanelle">
+    <head>
+        <title>Web Villanelle Drafter | Shadow's Den</title>
+        <link rel="stylesheet" href="pantoumStyle.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
+    </head>
+    <body>
+        <header>
+            <h1>Web Villanelle Drafter</h1>
+        </header>
+        <div class = "stanza-background-container">
+                <div class = "explainer">
+                    <div>
+                        <h2>What is a villanelle?</h2>
+                        <p><i>
+                            A Villanelle is a highly structured and intricate form of poetry that consists of 19 lines. 
+                            It originated from the Italian pastoral song and was popularized in English literature during the 19th and 20th centuries. 
+                            Villanelles often explore complex emotions, 
+                            existential questions, or meditations on time, memory, and change. 
+                            The strict structure challenges poets to craft each line with precision and to create a cohesive and powerful whole.
+                        </i> </p>
+                    </div>
+                    <div>
+                        <h2>So how does this help?</h2>
+                        <p><i>
+                           Selecting words shows a pop up of rhymes to inspire you and synonyms in case you find you've run into a syllable issue
+
+                        </i> </p>
+                    </div>
+                    <div class = "settings">
+                        <h3>Settings</h3>
+                        <span class = "sub_settings">
+                            <input type ="checkbox" id ="lineToggle"></input>
+                            <label for = "lineToggle">Line number</label>
+                        </span>
+                    </div>
+                </div>
+                <div class = "stanza">
+                    <p> Poem Title:</p>
+                    <input type = "text" class = "line" placeholder = "Title here"></input> 
+                    <p>Poet:</p>
+                    <input type = "text" class = "line"value = "By:"></input> 
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A1" 
+                           type = "text"
+                           class = "line line_1"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A2" 
+                           type = "text" 
+                           class = "line line_2"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A1" 
+                           type = "text" 
+                           class = "line line_1"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A2" 
+                           type = "text" 
+                           class = "line line_2"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A1" 
+                           type = "text" 
+                           class = "line line_1"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A2" 
+                           type = "text" 
+                           class = "line line_2"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "stanza" id = "stanza">
+                    <input placeholder="A" 
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="B"
+                           type = "text"
+                           class = "line"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A1" 
+                           type = "text" 
+                           class = "line line_1"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                    <input placeholder="A2" 
+                           type = "text" 
+                           class = "line line_2"
+                           oninput = "handleChange(this)"
+                           />
+                           <br>
+                </div>
+                <div class = "button-holder">
+
+                    <button onclick="ToEditor()" class = "generateButton"> Copy Poem! </button>
+                    <button onclick="DownloadFile()" class = "generateButton"> Download Poem! </button>
+                    <br><br>
+                    <div class = "button-holder">
+                    <textarea placeholder = "Copy from here" readonly id = "EditArea"> </textarea>
+                    </div>
+                </div> 
+        </div>
+
+        <script src = "villanelle.js">
+           
+        </script>
+    </body>
+</html>
