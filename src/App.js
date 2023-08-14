@@ -1,7 +1,7 @@
 import React from "../_snowpack/pkg/react.js";
-import Header from "components/Header.js";
-import Main from "components/Main.js";
-import Footer from "components/Footer.js";
+import Header from "./components/Header.js";
+import Main from "./components/Main.js";
+import Footer from "./components/Footer.js";
 const App = (props) => {
   if (props.page == "index") {
     return /* @__PURE__ */ React.createElement("div", {
