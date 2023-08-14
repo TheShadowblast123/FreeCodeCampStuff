@@ -76,8 +76,7 @@ body {
   h1 {
       font-size: 6vw;
       padding-left: 3%;
-      -webkit-text-decoration-line: underline;
-              text-decoration-line: underline;
+      text-decoration-line: underline;
   }
   h2 {
       font-size: 4.5vw;
