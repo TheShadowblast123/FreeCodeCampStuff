@@ -3,7 +3,10 @@ body {
      color: blanchedalmond;
 }
 
-
+.section-container {
+  max-width:1024px;
+  margin:auto;
+}
 #image{
      height: auto;
      max-width:100%;
