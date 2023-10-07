@@ -1,40 +1,96 @@
 body {
-    background-color: black;
-    color: blanchedalmond;
-  }
+     background-color: rgb(5, 5, 20);
+     color: blanchedalmond;
+}
 
-  #img-div {
-    background: grey;
-    padding: 10px;
-    margin: 0;
-  }
-  #image{
+
+#image{
+     height: auto;
+     max-width:100%;
+     display:block;
+     margin:auto;
+     border-radius: 10px;
+}
+.sub-heading {
+     font-style: italic;
+     text-align: center;
+     margin:auto;
+}
+#img-caption{
+     margin: 15px 0 5px 0;
+     text-align: center;
+
+}
+#tribute-info {
+     max-width: 90%;
+     margin: 0 auto 50px auto;
+     text-align: left;
+     line-height: 1.6;
+}
+#tribute-link{
+     color: #477ca7;
+}
+#title {
+     font-size: 4rem;
+     margin-bottom: 0;
+     text-align: center;
+}
+details {
+  display: inline;
+  margin:0.3%;
+ 
+}
+h2 {
+  padding-left: 5%;
+
+}
+summary:hover {
+  box-shadow: 0px 0px 10px white;
+}
+summary {
+  display: inline;
+  border-radius: 10px;
+  width: 100%;
+  
+}
+.sub-icon {
+  display: inline;
+  max-width: 100%;
   height: auto;
-  max-width:100%;
-  display:block;
+  object-fit: contain;
+}
+.sub-icon-holder{
+  max-width: 40%;
+}
+ul { list-style-type: none; }
+li {
   margin:auto;
-  }
-  .sub-heading {
-    font-style: italic;
-    text-align: center;
-    margin:auto;
-  }
-  #img-caption{
-   margin: 15px 0 5px 0;
-   text-align: center;
-   color: black;
-  }
-  #tribute-info {
-    max-width: 550px;
-    margin: 0 auto 50px auto;
-    text-align: left;
-    line-height: 1.6;
-  }
-  #tribute-link{
-    color: #477ca7;
-  }
-  #title {
-    font-size: 4rem;
-    margin-bottom: 0;
-    text-align: center;
-  }
+  
+}
+details > summary {
+  
+  padding: 2px 6px;
+  width: 15em;
+  background-color: #0f0f3d;
+  border: none;
+  box-shadow: 3px 3px 4px black;
+  cursor: pointer;
+}
+
+details > p {
+  
+  border-radius: 10px;
+  background-color: #141452;
+  padding: 2px 6px;
+  margin: 0;
+  box-shadow: 3px 3px 4px black;
+}
+
+details[open] > summary {
+  background-color: #191966;
+}
+.container {
+  margin:auto;
+  width: 80%;
+  text-align: center;
+}
